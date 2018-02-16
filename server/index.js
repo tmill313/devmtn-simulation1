@@ -16,7 +16,7 @@ app.get('/api/binlist/:id', ctrl.getAllBins);
 app.get('/api/binlist/bincontent/:id', ctrl.getBinCont)
 app.delete('/api/binlist/:id', ctrl.delete);
 app.post('/api/binlist/:id', ctrl.add);
-
+app.put('/api/binlist/bincontent/:id', ctrl.update)
 
 
 

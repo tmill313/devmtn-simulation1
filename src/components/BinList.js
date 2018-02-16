@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import './Home.css';
 
 export default class BinList extends Component{
     constructor() {
@@ -22,26 +23,30 @@ export default class BinList extends Component{
 
 render() {
     const newBin = this.state.idBin.map((obj, i) => (
-        <div>
+        <div className='binlist-link-container'>
             {obj.toggle === 'true'
             ?
-            <div>
-            <Link to={`/api/binlist/bincontent/${obj.binid}`}><h1>BIN {obj.binid.charAt(1)}</h1></Link>
+            <div className="binlist-links">
+            <Link  className='bin-links' to={`/api/binlist/bincontent/${obj.binid}`}><span>Bin {obj.binid.charAt(1)}</span></Link>
             </div>
             :
-            <div>
-            <h1>BIN {obj.binid.charAt(1)}</h1>
-            <Link to={`/api/binlist/bincontent/${obj.binid}`}><button>+ ADD INVENTORY</button></Link>
+            <div  className="binlist-links">
+            <Link className="add-inventory-link" to={`/api/binlist/bincontent/${obj.binid}`}><span>+ Add inventory</span></Link>
             </div>
         
         }
         </div>
     ))
     return(
-        <div>
+        <div  className="binlist-main-container">
+        <header className="header">
             <Link to='/'><button>HOME</button></Link>
-            <h1>{this.state.idBin.binid}</h1>
+        </header>
+        <div className='link-outside-container'>
+            <div className='binlist-link-container'>
             {newBin}
+            </div>
+        </div>
         </div>
     )
 }

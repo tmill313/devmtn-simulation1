@@ -13,7 +13,6 @@ export default (
     <Route exact path='/' component={Home}/>
     <Route exact path='/api/binlist/:id' component={BinList}/>
     <Route exact path='/api/binlist/bincontent/:id' component={BinContent}/>
-    <Route path='/api/binlist/:id' component={BinList}/>
 
 
 

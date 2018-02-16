@@ -24,6 +24,12 @@ add: (req, res) => {
     const{binname, price, toggle, binid} = req.body
 
     db.add([binname, price, toggle, binid]).then(bins => res.status(200).send(bins))
+},
+update: (req, res) => {
+    const db = req.app.get('db');
+    const {binname, price, binid} = req.body
+
+    db.update([binname, price, binid]).then(() => res.status(200).send())
 }
 
 
