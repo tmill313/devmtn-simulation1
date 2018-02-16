@@ -95,3 +95,16 @@
     margin-bottom: 10px;
 
 }
+.add-button {
+    height: auto;
+    font-size: 30px;
+    border: none;
+    width: 536px;
+    border-radius: 3px;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    background-color: #40f99b;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}

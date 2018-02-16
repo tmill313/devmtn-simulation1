@@ -85,7 +85,7 @@ render() {
             {console.log(this.state.newName)}
             <p>Price
             <input className='input-class'onChange={e => this.handlePrice(e)}></input></p>
-            <Link to={`/api/binlist/${obj.shelfid}`}><button onClick={this.addItem(obj)}>ADD TO INVENTORY</button></Link>
+            <Link to={`/api/binlist/${obj.shelfid}`}><button className='add-button' onClick={this.addItem(obj)}>+ Add to inventory</button></Link>
             </div>
             }
         </div>
