@@ -1,0 +1,1 @@
+select * from shelf where binid = $1
